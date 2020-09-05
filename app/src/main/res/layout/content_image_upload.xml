@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.mddeloarhossain.firebaseauth.ImageUploadActivity"
+    tools:showIn="@layout/app_bar_image_upload">
+
+    <EditText
+        android:id="@+id/slider_image_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Slider Image Description"
+        />
+    <EditText
+        android:id="@+id/slider_image_desc_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Slider Image Description"
+        />
+    <EditText
+        android:id="@+id/slider_image_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Slider Image Name"
+        />
+    <Button
+        android:id="@+id/chooseImageButton"
+        android:background="@drawable/buttonstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose Image"
+
+        />
+
+
+    <ImageView
+        android:id="@+id/imageViewId"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/saveImageButton"
+        android:background="@drawable/buttonstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_marginTop="10dp"
+        />
+
+
+</LinearLayout>

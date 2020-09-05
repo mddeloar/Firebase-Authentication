@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mddeloarhossain.firebaseauth.MainActivity">
+
+    <Button
+        android:id="@+id/btn_sign_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Out"
+        android:enabled="false"
+        android:background="@android:color/holo_blue_light"
+        />
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inAnimation="@android:anim/slide_out_right"
+        android:outAnimation="@android:anim/slide_in_left"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="About You"
+                    android:layout_margin="20dp"
+                    android:textSize="20sp"
+                    style="@style/Base.TextAppearance.AppCompat.Large"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_question" />
+
+
+                    <EditText
+                        android:id="@+id/NameId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+
+                        android:background="@drawable/buttonstyle"
+                        android:layout_marginBottom="2dp"
+                        android:padding="5dp"
+
+                        android:textAlignment="center"
+
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_question" />
+
+                    <EditText
+                        android:id="@+id/DistrictId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="District/University"
+                        android:textAlignment="center"
+                        android:background="@drawable/buttonstyle"
+                        android:layout_margin="2dp"
+                        android:padding="5dp"
+
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_question" />
+
+                    <EditText
+                        android:id="@+id/AreaId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Area(Present)"
+                        android:textAlignment="center"
+                        android:background="@drawable/buttonstyle"
+                        android:layout_margin="2dp"
+                        android:padding="5dp"
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_question" />
+
+                    <EditText
+                        android:id="@+id/AgeId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Age"
+                        android:textAlignment="center"
+                        android:inputType="number"
+                        android:background="@drawable/buttonstyle"
+                        android:layout_margin="2dp"
+                        android:padding="5dp"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_question" />
+
+
+                    <EditText
+                        android:inputType="phone"
+                        android:id="@+id/ContactNumberId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Contact Number"
+                        android:textAlignment="center"
+                        android:background="@drawable/buttonstyle"
+                        android:layout_margin="2dp"
+                        android:padding="5dp"
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_question" />
+
+                    <Spinner
+                        android:id="@+id/spinnerGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/Gender"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:background="@drawable/buttonstyle"
+                        android:layout_margin="2dp"
+                        android:padding="5dp">
+
+                    </Spinner>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_question" />
+
+
+                    <Spinner
+                        android:id="@+id/spinnerBloodGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/BloodGroup"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:background="@drawable/buttonstyle"
+                        android:layout_margin="2dp"
+                        android:padding="5dp"
+
+                        >
+
+                    </Spinner>
+                </LinearLayout>
+
+
+
+                <ProgressBar
+                    android:id="@+id/progressbarId"
+                    android:layout_weight="0.16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+
+                    />
+                <CheckBox
+                    android:id="@+id/checkboxId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show me on the donor list"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:layout_margin="10dp"
+
+                    />
+
+
+
+
+
+            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="16dp"
+                android:onClick="previousView"
+                android:text="Previous" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="16dp"
+                android:onClick="nextView"
+                android:text="Next" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Your Image"
+                    android:layout_margin="20dp"
+                    android:textSize="20sp"
+                    style="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                <ImageView
+                    android:id="@+id/imageViewId"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher"
+                    />
+                <Button
+                    android:id="@+id/chooseImageButtonId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose Image"
+                    android:background="@drawable/buttonstyle"
+                    android:layout_margin="10dp"/>
+            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="16dp"
+                android:onClick="previousView"
+                android:text="Previous" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="16dp"
+                android:onClick="nextView"
+                android:text="Next" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Your Tution Stauts"
+                    android:layout_margin="20dp"
+                    android:textSize="20sp"
+                    style="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_question" />
+
+
+                    <EditText
+                        android:id="@+id/SujectNameId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Subject(s) Name"
+
+                        android:background="@drawable/buttonstyle"
+                        android:layout_marginBottom="2dp"
+                        android:padding="5dp"
+
+                        android:textAlignment="center"
+
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_question" />
+
+
+                    <EditText
+                        android:id="@+id/DescriptionId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Description(Experience and/or Expert)"
+                        android:lines="5"
+                        android:background="@drawable/buttonstyle"
+                        android:layout_marginBottom="2dp"
+                        android:padding="5dp"
+
+                        android:textAlignment="center"
+
+
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="16dp"
+                android:onClick="previousView"
+                android:text="Previous" />
+            <Button
+                android:id="@+id/saveInfoId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="16dp"
+                android:onClick="saveInfo"
+                android:text="OK" />
+
+        </RelativeLayout>
+
+
+    </ViewFlipper>
+
+
+</RelativeLayout>

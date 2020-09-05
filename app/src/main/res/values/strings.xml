@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">FirebaseAuth</string>
+
+    <string name="facebook_application_id" translatable="false">610421212694717</string>
+    <string name="facebook_login_protocol_schema" translatable="false">fb610421212694717</string>
+
+    <string-array name="BloodGroup">
+        <item>Blood Group</item>
+        <item>AB+</item>
+        <item>A+</item>
+        <item>B+</item>
+        <item>AB-</item>
+        <item>A-</item>
+        <item>B-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+
+    <string-array name="Gender">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <string name="view_flipper">View Flipper</string>
+    <string name="jonaki">জোনাকি</string>
+    <string name="shohanuvuti">সহানুভূতি</string>
+    <string name="shotota">সততা</string>
+    <string name="shochetenota">সচেতনতা</string>
+    <string name="slogan">মানবতা যেখানে অবহেলিত জোনাকিরা সেখানে উদ্ভাসিত</string>
+
+
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_image_upload">ImageUploadActivity</string>
+
+</resources>
